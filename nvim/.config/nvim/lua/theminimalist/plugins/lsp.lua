@@ -33,6 +33,7 @@ return {
 				"lua_ls",
 				"clangd",
 				"tsserver",
+				"marksman",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
@@ -86,6 +87,7 @@ return {
 				"eslint_d", -- js linter
 				"pylint",
 				"isort",
+				"markdownlint",
 			},
 		})
 
