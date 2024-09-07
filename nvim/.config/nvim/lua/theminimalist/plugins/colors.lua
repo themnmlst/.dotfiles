@@ -23,7 +23,7 @@ return {
 					keywords = { italic = false },
 					-- Background styles. Can be "dark", "transparent" or "normal"
 					sidebars = "dark", -- style for sidebars, see below
-					floats = "dark", -- style for floating windows
+					floats = "normal", -- style for floating windows
 				},
 			})
 		end,
@@ -40,6 +40,15 @@ return {
 			vim.cmd("colorscheme rose-pine")
 
 			ColorMyPencils()
+		end,
+	},
+	{
+		"baliestri/aura-theme",
+		lazy = false,
+		priority = 1000,
+		config = function(plugin)
+			vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+			vim.cmd([[colorscheme aura-dark]])
 		end,
 	},
 }
