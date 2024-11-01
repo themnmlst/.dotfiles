@@ -183,8 +183,8 @@ exec firefox
 assign [class="FreeTube"] $workspace2
 exec freetube
 
-assign [class="Alacritty"] $workspace3
-exec alacritty
+assign [class="terminal"] $workspace3
+exec i3-sensible-terminal
 
 assign [class="Gimp"] $workspace7
 exec gimp
@@ -196,10 +196,15 @@ assign [class="Signal"] $workspace9
 exec signal-desktop
 
 # Programmer's DVORAK
-#exec --no-startup-id xmodmap /home/theminimalist/dotfiles/xmodmap/./xmodmap
+exec --no-startup-id xmodmap /home/theminimalist/.dotfiles/xmodmap/./xmodmap
+
+exec xrandr --output DP-4 --primary --auto --rotate normal --output DP-2 --auto --rotate left --right-of DP-4
+
+# DESKTOP screen ON, external ON
+#exec xrandr --output DP-4 --mode 1680x1050 --rate 60 --pos 0x0 --output DP-2 --mode 1680x1050 --rate 60 --pos 1680x0 --rotate right
 
 # LAPTOP screen ON, external OFF
-exec xrandr --output eDP1 --primary --set "Broadcast RGB" "Full"
+#exec xrandr --output DP2 --primary --set "Broadcast RGB" "Full"
 
 # LAPTOP screen ON, external ON
 #exec xrandr --output eDP1 --mode 1920x1080 --pos 0x0 --output DP2 --mode 2560x1440 --rate 144 --pos 1920x0

@@ -57,6 +57,10 @@ return {
 				end,
 			},
 		})
+		require("lspconfig").clangd.setup({
+			cmd = { "/home/theminimalist/.local/share/nvim/mason/bin/clangd" },
+			root_dir = require("lspconfig").util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+		})
 
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
@@ -73,8 +77,9 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" }, -- For luasnip users.
+				-- { name = "nvim_lsp" },
+				-- { name = "luasnip" }, -- For luasnip users.
+				-- { name = "clangd" },
 				{ name = "buffer" },
 				{ name = "path" },
 			}, {}),
