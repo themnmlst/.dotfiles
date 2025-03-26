@@ -17,7 +17,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock --i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -37,8 +37,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec xterm
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -184,7 +185,7 @@ assign [class="FreeTube"] $workspace2
 exec freetube
 
 assign [class="terminal"] $workspace3
-exec i3-sensible-terminal
+exec alacritty
 
 assign [class="Gimp"] $workspace7
 exec gimp
@@ -196,9 +197,9 @@ assign [class="Signal"] $workspace9
 exec signal-desktop
 
 # Programmer's DVORAK
-exec --no-startup-id xmodmap /home/theminimalist/.dotfiles/xmodmap/./xmodmap
+#exec --no-startup-id xmodmap /home/theminimalist/.dotfiles/xmodmap/./xmodmap
 
-exec xrandr --output DP-4 --primary --auto --rotate normal --output DP-2 --auto --rotate left --right-of DP-4
+#exec xrandr --output DP-4 --primary --auto --rotate normal --output DP-2 --auto --rotate left --right-of DP-4
 
 # DESKTOP screen ON, external ON
 #exec xrandr --output DP-4 --mode 1680x1050 --rate 60 --pos 0x0 --output DP-2 --mode 1680x1050 --rate 60 --pos 1680x0 --rotate right
