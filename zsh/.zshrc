@@ -119,3 +119,8 @@ export PATH="$HOME/.local/bin:$PATH"
 
 source ~/.zsh_profile
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH=$PATH:/opt/nvim-linux-x86_64/bin
+export PATH=$PATH:/usr/local/go
+export PATH=$PATH:/go/bin
+export PATH=$PATH:$HOME/.local/opt/go/bin
+export PATH=$PATH:$HOME/go/bin
