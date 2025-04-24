@@ -5,7 +5,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find -L ~/ ~/personal ~/.dotfiles/ -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find -L ~/workspace ~/.dotfiles/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 # Exit if no directory was selected.
