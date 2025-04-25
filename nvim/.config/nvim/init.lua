@@ -1,1 +1,2 @@
-require("config.lazy")
+require("theminimalist.core")
+require("theminimalist.lazy")
