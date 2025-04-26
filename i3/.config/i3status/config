@@ -5,52 +5,52 @@
 # The following line should contain a sharp s:
 # ß
 # If the above line is not correctly displayed, fix your editor first!
-
 general {
     colors = true
-    interval = 1
-    color_good      = '#4CAF50'    # Darker green for better contrast
-    color_degraded  = '#FFEB3B'    # More saturated yellow for better visibility
-    color_bad       = '#F44336'    # Darker red for more contrast
+    interval = 60
+    color_good = '#4CAF50'
+    color_degraded = '#FFEB3B'
+    color_bad = '#F44336'
 }
 
-order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
-order += "battery all"
+order += "battery"
 order += "disk /"
 order += "load"
 order += "memory"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+    format_up = "W: (%quality at %essid) %ip"
+    format_down = "W: down"
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+    format_up = "E: %ip (%speed)"
+    format_down = "E: down"
 }
 
-battery all {
-        format = "%status %percentage %remaining"
+battery CMB1 {
+    format = "%status %percentage %remaining"
+    format_down = "No battery"
 }
 
 disk "/" {
-        format = "%avail"
+    format = "%avail"
 }
 
 load {
-        format = "%1min"
+    format = "CPU load: %1min | %5min | %15min"
 }
 
 memory {
-        format = "%used | %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+    format = "Memory: %used/%available"
+    threshold_degraded = "1G"
+    format_degraded = "MEMORY < %available"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+    format = "%a %Y-%m-%d %H:%M"
 }
+
