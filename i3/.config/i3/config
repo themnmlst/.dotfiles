@@ -237,37 +237,3 @@ bar {
     }
 }
 
-bar {
-    status_command i3status
-    tray_output primary
-
-    colors {
-        background        #ffffff        # Light background to match GitHub's white theme
-        statusline        #0f172a        # Dark text for visibility (same as your Alacritty foreground)
-        separator         #d0d7de        # Light gray separator (matches Alacritty bright gray)
-
-        # Workspace colors
-        focused_workspace #0969da #eaeef2 #0f172a  # Blue background, light text, dark statusline on focused workspace
-        active_workspace  #d0d7de #f6f8fa #0f172a  # Light gray background, light text, dark statusline for active workspace
-        inactive_workspace #ffffff #ffffff #57606a  # White background, soft gray text for inactive workspaces
-        urgent_workspace  #d1242f #ffebe9 #82071e  # Red background, pale red text for urgent workspaces
-    }
-}
-
-bar {
-    status_command i3status
-    tray_output primary
-
-    colors {
-        background        #ffffff        # Light background to match GitHub's white theme
-        statusline        #0f172a        # Dark text for visibility (same as your Alacritty foreground)
-        separator         #d0d7de        # Light gray separator (matches Alacritty bright gray)
-
-        # Workspace colors
-        focused_workspace #0969da #eaeef2 #0f172a  # Blue background, light text, dark statusline on focused workspace
-        active_workspace  #d0d7de #f6f8fa #0f172a  # Light gray background, light text, dark statusline for active workspace
-        inactive_workspace #ffffff #ffffff #57606a  # White background, soft gray text for inactive workspaces
-        urgent_workspace  #d1242f #ffebe9 #82071e  # Red background, pale red text for urgent workspaces
-    }
-}
-

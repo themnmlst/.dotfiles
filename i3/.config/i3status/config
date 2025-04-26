@@ -9,9 +9,9 @@
 general {
     colors = true
     interval = 1
-    color_good      = '#88b090'    # Soft green, matches Alacritty's green
-    color_degraded  = '#ccdc90'    # Soft yellow, matches Alacritty's yellow
-    color_bad       = '#e89393'    # Soft red, matches Alacritty's red
+    color_good      = '#4CAF50'    # Darker green for better contrast
+    color_degraded  = '#FFEB3B'    # More saturated yellow for better visibility
+    color_bad       = '#F44336'    # Darker red for more contrast
 }
 
 order += "ipv6"
