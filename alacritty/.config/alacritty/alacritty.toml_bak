@@ -1,0 +1,43 @@
+[window]
+decorations = "none"
+opacity = 1.0
+padding = { x = 8, y = 8 }
+
+[font]
+normal = { family = "MesloLGS Nerd Font", style = "Regular" }
+bold = { style = "Bold" }
+italic = { style = "Italic" }
+size = 11.0
+
+[colors.primary]
+background = "#ffffff"
+foreground = "#0f172a"
+
+[colors.cursor]
+text = "#ffffff"
+cursor = "#0969da"
+
+[colors.selection]
+text = "#ffffff"
+background = "#0969da"
+
+[colors.normal]
+black   = "#ffffff"
+red     = "#d1242f"
+green   = "#1a7f37"
+yellow  = "#9a6700"
+blue    = "#0969da"
+magenta = "#8250df"
+cyan    = "#1b7c83"
+white   = "#24292f"
+
+[colors.bright]
+black   = "#d0d7de"
+red     = "#ffebe9"
+green   = "#dafbe1"
+yellow  = "#fff8c5"
+blue    = "#ddf4ff"
+magenta = "#fbefff"
+cyan    = "#ddf4ff"
+white   = "#0f172a"
+
