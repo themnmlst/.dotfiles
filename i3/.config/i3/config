@@ -222,7 +222,7 @@ exec signal-desktop
 # finds out, if available)
 bar {
     status_command i3status
-    tray_output primary
+    #tray_output primary
 
     colors {
         background        #ffffff        # Light background to match GitHub's white theme

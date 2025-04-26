@@ -1,44 +1,67 @@
-vim.cmd("let g:netrw_liststyle = 3")
+local opt = vim.opt
 
-local opt = vim.opt -- for conciseness
-	
--- line numbers
-opt.relativenumber = true -- show relative line numbers
-opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+-- Automatically indent new lines to match the indentation of the previous line
+opt.autoindent = true
 
--- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
-opt.autoindent = true -- copy indent from current line when starting new one
+-- Disable backup files (usually `.filename~`)
+opt.backup = false
 
--- line wrapping
-opt.wrap = false -- disable line wrapping
---
--- search settings
--- opt.ignorecase = true -- ignore case when searching
--- opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
---
--- cursor line
-opt.cursorline = true -- highlight the current cursor line
---
--- appearance
---
--- turn on termguicolors for nightfly colorscheme to work
--- (have to use iterm2 or any other true color terminal)
--- opt.termguicolors = true
--- opt.background = "dark" -- colorschemes that can be light or dark will be made dark
--- opt.signcolumn = "yes" -- show sign column so that text doesn't shift
---
--- backspace
--- opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
---
--- clipboard
--- opt.clipboard:append("unnamedplus") -- use system clipboard as default register
---
--- split windows
--- opt.splitright = true -- split vertical window to the right
--- opt.splitbelow = true -- split horizontal window to the bottom
---
--- turn off swapfile
+-- Show a vertical line at column 80 (helps with line length limits)
+opt.colorcolumn = "80"
+
+-- Highlight the current line the cursor is on
+opt.cursorline = true
+
+-- Convert tabs to spaces
+opt.expandtab = true
+
+-- Disable persistent search highlight until a new search is made
+opt.hlsearch = false
+
+-- Enable search to show matches as you type
+opt.incsearch = true
+
+-- Same as opt.nu; redundant but okay — keeps line numbers on
+opt.number = true
+
+-- Show relative line numbers (distance from the current line)
+opt.relativenumber = true
+
+-- Keep at least 8 lines visible above and below the cursor when scrolling
+opt.scrolloff = 8
+
+-- Number of spaces inserted when indenting with `>>`, `<<`, etc.
+opt.shiftwidth = 4
+
+-- Always show the sign column (prevents screen shifting when errors appear)
+opt.signcolumn = "yes"
+
+-- Make search smarter: case-insensitive unless you type uppercase
+opt.smartcase = true
+
+-- Smart auto-indentation on new lines, particularly for languages like C, Lua, etc.
+opt.smartindent = true
+
+-- Number of spaces that a `<Tab>` counts for in insert mode
+opt.softtabstop = 4
+
+-- Disable swap file creation (useful if you use git or external versioning)
 opt.swapfile = false
+
+-- Number of spaces a `<Tab>` counts for in normal mode
+opt.tabstop = 4
+
+-- Enable full RGB color support in the terminal
+opt.termguicolors = true
+
+-- Directory to store undo history between sessions
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+-- Enable persistent undo (saves undo history even after closing files)
+opt.undofile = true
+
+-- Time (in ms) to wait before triggering events like CursorHold
+opt.updatetime = 50
+
+-- Disable line wrapping (long lines go off the screen instead of wrapping)
+opt.wrap = false
