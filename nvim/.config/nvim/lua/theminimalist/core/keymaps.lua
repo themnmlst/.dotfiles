@@ -24,7 +24,7 @@ keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
 
 -- Reload (source) the current file
 keymap.set("n", "<leader><leader>", function()
-	vim.cmd("so")
+    vim.cmd("so")
 end)
 
 -- Yank (copy) the current line to the system clipboard
@@ -47,7 +47,7 @@ keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 
 -- Stop the collaborative session with Vim With Me plugin
 keymap.set("n", "<leader>svwm", function()
-	require("vim-with-me").StopVimWithMe()
+    require("vim-with-me").StopVimWithMe()
 end)
 
 -- Edit the Packer plugin setup file directly
@@ -55,7 +55,7 @@ keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprim
 
 -- Start the collaborative session with Vim With Me plugin
 keymap.set("n", "<leader>vwm", function()
-	require("vim-with-me").StartVimWithMe()
+    require("vim-with-me").StartVimWithMe()
 end)
 
 -- Make the current file executable (useful for scripts)
