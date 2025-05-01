@@ -4,7 +4,7 @@ opacity = 1.0
 padding = { x = 8, y = 8 }
 
 [font]
-normal = { family = "MesloLGS Nerd Font", style = "Regular" }
+normal = { family = "MesloLGS NF", style = "Regular" }
 bold = { style = "Bold" }
 italic = { style = "Italic" }
 size = 11.0
