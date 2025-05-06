@@ -131,6 +131,18 @@ input "10730:864:Kinesis_Kinesis_Adv360" {
 #
 # Workspaces:
 #
+    # Workspace variables
+    set $workspace1 1
+    set $workspace2 2
+    set $workspace3 3
+    set $workspace4 4
+    set $workspace5 5
+    set $workspace6 6
+    set $workspace7 7
+    set $workspace8 8
+    set $workspace9 9
+    set $workspace10 10
+
     # Switch to workspace
     # bindsym $mod+1 workspace number 1
     # bindsym $mod+2 workspace number 2
@@ -254,24 +266,33 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
+# Default apps opening on startup in their assigned workspaces
+assign [app_id="firefox"] $workspace1
+exec firefox
+
+assign [class="FreeTube"] $workspace2
+exec freetube
+
+assign [app_id="Alacritty"] $workspace3
+exec alacritty
+
+assign [app_id="vlc"] $workspace6
+exec vlc
+
+assign [app_id="org.gimp.GIMP"] $workspace7
+exec gimp
+
+assign [app_id="com.discordapp.Discord"] $workspace8
+exec discord
+
+assign [app_id="org.signal.Signal"] $workspace9
+exec signal-desktop
+
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
 bar {
     swaybar_command waybar
-    #position top
-    #status_command waybar
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-    #
-    # colors {
-    #     statusline #ffffff
-    #     background #323232
-    #     inactive_workspace #32323200 #32323200 #5c5c5c
-    # }
 }
 
 include /etc/sway/config.d/*
