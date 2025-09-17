@@ -1,0 +1,36 @@
+bind -T copy-mode-vi v send-keys -X begin-selection
+bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+bind -r D neww -c "#{pane_current_path}" "[[ -e TODO.md ]] && nvim TODO.md || nvim ~/todo.md"
+bind -r ^ last-window
+bind -r h select-pane -L
+bind -r j select-pane -D
+bind -r k select-pane -U
+bind -r l select-pane -R
+bind r source-file ~/.tmux.conf
+bind r source-file ~/.tmux.conf \; display-message "🎨 Tmux theme reloaded!"
+bind-key -r f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
+bind-key -r i run-shell "tmux neww tmux-cht.sh"
+bind-key C-a send-prefix
+set -g base-index 1
+set -g default-terminal "tmux-256color"
+set -g message-command-style "bg=#2f3b4c,fg=#ffffff"
+set -g message-style "bg=#2f3b4c,fg=#ffffff"
+set -g mode-style "bg=#4c8bf5,fg=#ffffff"
+set -g pane-active-border-style "fg=#0969da"
+set -g pane-border-style "fg=#9ca3af"
+set -g status on
+set -g status-interval 2
+set -g status-left "#[bg=#ffffff,fg=#0969da,bold] #S #[default]"
+set -g status-left-length 40
+set -g status-right ""
+set -g status-right-length 40
+set -g status-style "bg=#ffffff,fg=#0f172a"   # Light background with dark text
+set -g visual-bell on
+set -s escape-time 0
+set-option -g prefix C-a
+set-window-option -g mode-keys vi
+set-window-option -g window-status-current-format " #[bg=#4c8bf5,fg=#ffffff]#I:#W#F "
+set-window-option -g window-status-current-style "bg=#4c8bf5,fg=#ffffff,bold"
+set-window-option -g window-status-format " #[bg=#f2f2f2,fg=#333333]#I:#W#F "
+set-window-option -g window-status-style "bg=#f2f2f2,fg=#333333"
+unbind C-b
