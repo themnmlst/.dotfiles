@@ -1,11 +1,11 @@
 local opt = vim.opt
 
 -- Netrw settings to make it more "tree-like"
-vim.g.netrw_banner = 0 -- Disable the annoying banner
-vim.g.netrw_liststyle = 3 -- Tree-style listing
+vim.g.netrw_banner = 0       -- Disable the annoying banner
+vim.g.netrw_liststyle = 0    -- Tree-style listing
 vim.g.netrw_browse_split = 0 -- Open files in the same window
-vim.g.netrw_altv = 1 -- Open splits to the right
-vim.g.netrw_winsize = 25 -- Set width of netrw window
+vim.g.netrw_altv = 1         -- Open splits to the right
+vim.g.netrw_winsize = 25     -- Set width of netrw window
 
 -- Automatically indent new lines to match the indentation of the previous line
 opt.autoindent = true
